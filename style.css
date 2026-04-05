@@ -19,7 +19,7 @@
 }
 
 body {
-    font-family: 'Poppins', sans-serif; /* Nueva Tipografía */
+    font-family: 'Poppins', sans-serif;
     line-height: 1.6;
     color: var(--text-dark);
     background-color: var(--bg-color);
@@ -50,7 +50,7 @@ nav {
     font-size: 1.8rem;
     font-weight: 700;
     letter-spacing: 1px;
-    color: var(--color-acento); /* Destacamos el logo con el naranja */
+    color: var(--color-acento);
     text-decoration: none;
 }
 
@@ -99,7 +99,7 @@ nav {
 
 /* Secciones */
 section {
-    padding: 6rem 2rem 4rem; /* Ajuste para el header fijo */
+    padding: 6rem 2rem 4rem;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -132,6 +132,11 @@ section {
     color: #555;
 }
 
+/* Carrusel */
+.carousel-section {
+    padding-top: 2rem;
+}
+
 .carousel {
     position: relative;
     max-width: 900px;
@@ -157,13 +162,6 @@ section {
 
 .carousel-slide.active {
     opacity: 1;
-}
-
-.carousel-slide img {
-    width: 100%;
-    display: block;
-    max-height: 350px;
-    object-fit: cover;
 }
 
 .image-placeholder {
@@ -262,7 +260,7 @@ section {
     display: flex;
     justify-content: center;
     gap: 0.5rem;
-    padding: 0.8rem 0 0.8rem;
+    padding: 0.8rem 0;
     background: #f7f9fb;
 }
 
@@ -282,18 +280,114 @@ section {
     transform: scale(1.2);
 }
 
-@media (max-width: 768px) {
-    .carousel-button { width: 36px; height: 36px; font-size: 1.25rem; }
-    .slide-content { padding: 0.8rem 0.9rem 1.1rem; }
-    .slide-content h3 { font-size: 1.1rem; }
-    .slide-content p { font-size: 0.9rem; }
+/* Títulos de sección */
+h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--color-principal);
+    font-size: 2.5rem;
+    position: relative;
 }
 
+h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: var(--color-acento);
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* Contenedores y Cards (Grid Responsivo) */
+.contenedor {
+    display: grid;
+    /* Esto hace que las cards se adapten solas sin necesidad de Media Queries */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    background-color: #fff;
+    padding: 2.5rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    border-top: 5px solid var(--color-secundario);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(25, 56, 146, 0.15);
+    border-top: 5px solid var(--color-acento);
+}
+
+.card h3 {
+    margin-bottom: 1rem;
+    color: var(--color-principal);
+    font-size: 1.4rem;
+}
+
+/* Sección de Contacto */
+#contacto {
+    text-align: center;
+    background: linear-gradient(to bottom, var(--bg-color), #ffffff);
+}
+
+#contacto .contenedor {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contacto p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: var(--text-dark);
+}
+
+.btn-whatsapp {
+    background-color: var(--color-whatsapp);
+    color: var(--text-light);
+    padding: 1rem 2.5rem;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 15px rgba(79, 169, 45, 0.4);
+    transition: background-color 0.3s, transform 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn-whatsapp:hover {
+    background-color: #3e8823;
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+/* =========================================
+   MEDIA QUERIES - DISEÑO RESPONSIVO (RWD) 
+   ========================================= */
+
+/* 1. TABLET Y PANTALLAS MEDIANAS (hasta 900px) */
 @media (max-width: 900px) {
     nav {
         padding: 0 1rem;
     }
 
+    /* Activamos el menú hamburguesa */
     .menu-toggle {
         display: flex;
     }
@@ -325,11 +419,13 @@ section {
 
     .nav-menu li {
         margin: 0;
+        width: 100%;
+        text-align: left;
     }
 
     .nav-menu a {
         display: block;
-        padding: 0.8rem 1.5rem;
+        padding: 1rem 2rem;
         border-top: 1px solid rgba(255,255,255,0.12);
     }
 
@@ -338,150 +434,67 @@ section {
     }
 
     .hero h1 {
-        font-size: 2.2rem;
+        font-size: 2.8rem;
     }
 
     .eslogan {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
     }
 
     section {
-        padding: 5rem 1rem 3rem;
+        padding: 5rem 1.5rem 3rem;
     }
 }
 
-@media (max-width: 500px) {
-    .hero h1 { font-size: 1.8rem; }
-    .descripcion { font-size: 0.95rem; }
-    .card { padding: 1.8rem 1rem; }
-    .btn-whatsapp { padding: 0.85rem 1.8rem; }
-}
-
-/* Títulos de sección */
-h2 {
-    text-align: center;
-    margin-bottom: 3rem;
-    color: var(--color-principal);
-    font-size: 2.5rem;
-    position: relative;
-}
-
-h2::after {
-    content: '';
-    display: block;
-    width: 80px;
-    height: 4px;
-    background-color: var(--color-acento);
-    margin: 10px auto 0;
-    border-radius: 2px;
-}
-
-/* Contenedores y Cards (Estilo unificado para Sobre Nosotros y Servicios) */
-.contenedor {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-}
-
-.card {
-    flex: 1;
-    min-width: 300px;
-    background-color: #fff;
-    padding: 2.5rem 2rem;
-    border-radius: 12px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-    border-top: 5px solid var(--color-secundario);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(25, 56, 146, 0.15); /* Sombra con el azul oscuro */
-    border-top: 5px solid var(--color-acento);
-}
-
-.card h3 {
-    margin-bottom: 1rem;
-    color: var(--color-principal);
-    font-size: 1.4rem;
-}
-
-/* Contacto y Botones */
-.contacto {
-    text-align: center;
-    margin-top: 4rem;
-}
-
-.btn-whatsapp {
-    background-color: var(--color-whatsapp);
-    color: var(--text-light);
-    padding: 1rem 2.5rem;
-    text-decoration: none;
-    border-radius: 50px; /* Botón en forma de píldora */
-    font-weight: 600;
-    font-size: 1.1rem;
-    box-shadow: 0 4px 15px rgba(79, 169, 45, 0.4);
-    transition: background-color 0.3s, transform 0.3s;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.btn-whatsapp:hover {
-    background-color: #3e8823; /* Un verde un poco más oscuro */
-    transform: scale(1.05);
-}
-
-/* Sección de Contacto */
-#contacto {
-    text-align: center;
-    background: linear-gradient(to bottom, var(--bg-color), #ffffff);
-}
-
-#contacto .contenedor {
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-#contacto p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-    color: var(--text-dark);
-}
-
-/* Responsive */
+/* 2. DISPOSITIVOS MÓVILES (hasta 768px) */
 @media (max-width: 768px) {
-    nav {
-        flex-direction: column;
+    .carousel-button { 
+        width: 36px; 
+        height: 36px; 
+        font-size: 1.25rem; 
     }
-
-    .nav-menu {
-        margin-top: 1rem;
+    
+    .slide-content { 
+        padding: 0.8rem 0.9rem 1.1rem; 
     }
-
-    .nav-menu li {
-        margin: 0 1rem;
+    
+    .slide-content h3 { 
+        font-size: 1.1rem; 
     }
-
+    
+    .slide-content p { 
+        font-size: 0.9rem; 
+    }
+    
     .hero h1 {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
     }
-
-    .contenedor {
-        grid-template-columns: 1fr;
-    }
-
-    .card {
-        width: 100%;
-        max-width: 400px;
+    
+    h2 {
+        font-size: 2rem;
     }
 }
 
-/* Footer */
-footer {
-    background-color: #000000;
-    color: #ffffff;
-    text-align: center;
-    padding: 1rem 0;
-    margin-top: 2rem;
+/* 3. MÓVILES PEQUEÑOS (hasta 500px) */
+@media (max-width: 500px) {
+    .hero h1 { 
+        font-size: 1.8rem; 
+    }
+    
+    .descripcion { 
+        font-size: 0.95rem; 
+    }
+    
+    .card { 
+        padding: 1.8rem 1rem; 
+    }
+    
+    .btn-whatsapp { 
+        padding: 0.85rem 1.5rem; 
+        font-size: 1rem;
+    }
+    
+    .logo {
+        font-size: 1.4rem;
+    }
 }
