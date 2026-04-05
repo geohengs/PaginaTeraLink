@@ -40,6 +40,8 @@ nav {
 .nav-menu {
     list-style: none;
     display: flex;
+    flex-wrap: wrap; /* Permite que los items bajen si no caben */
+    justify-content: center;
 }
 
 .nav-menu li {
@@ -64,7 +66,7 @@ section {
 }
 
 #inicio {
-    padding-top: 6rem;
+    padding-top: 8rem; /* Un poco más de espacio por si el menú crece */
     text-align: center;
 }
 
@@ -89,7 +91,7 @@ section {
     display: flex;
     justify-content: center;
     gap: 1rem;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* RWD automático para los cuadros */
 }
 
 .placeholder {
@@ -103,8 +105,8 @@ section {
     color: #cccccc;
 }
 
-/* Sobre Nosotros */
-#sobre-nosotros h2 {
+/* Sobre Nosotros y Servicios */
+#sobre-nosotros h2, #servicios h2 {
     text-align: center;
     margin-bottom: 2rem;
     color: #000000;
@@ -117,28 +119,9 @@ section {
     gap: 2rem;
 }
 
-.item {
+.item, .servicio {
     flex: 1;
-    min-width: 250px;
-    background-color: #fff;
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.item h3 {
-    margin-bottom: 1rem;
-    color: #555555;
-}
-
-/* Servicios */
-#servicios h2 {
-    text-align: center;
-    margin-bottom: 2rem;
-    color: #000000;
-}
-
-.servicio {
+    min-width: 250px; /* RWD: Evita que se hagan muy pequeños */
     background-color: #fff;
     padding: 1.5rem;
     border-radius: 8px;
@@ -146,7 +129,7 @@ section {
     margin-bottom: 1rem;
 }
 
-.servicio h3 {
+.item h3, .servicio h3 {
     margin-bottom: 1rem;
     color: #555555;
 }
@@ -164,37 +147,75 @@ section {
     border-radius: 5px;
     font-weight: bold;
     transition: background-color 0.3s;
+    display: inline-block;
 }
 
 .btn-whatsapp:hover {
     background-color: #555555;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
+/* =========================================
+   COMPATIBILIDAD RWD (Responsive Web Design)
+   ========================================= */
+
+/* 1. TABLET (Pantallas medianas, de 1024px hacia abajo) */
+@media screen and (max-width: 1024px) {
+    .hero h1 {
+        font-size: 2.5rem; /* Achicamos un poco el título */
+    }
+    
+    .eslogan {
+        font-size: 1.3rem;
+    }
+    
+    .item, .servicio {
+        flex: 1 1 45%; /* Las cards ocupan la mitad de la pantalla (2 columnas) */
+    }
+}
+
+/* 2. MÓVIL (Pantallas pequeñas, de 768px hacia abajo) */
+@media screen and (max-width: 768px) {
     nav {
         flex-direction: column;
+        gap: 1rem;
     }
 
     .nav-menu {
-        margin-top: 1rem;
+        margin-top: 0.5rem;
+        padding: 0;
     }
 
     .nav-menu li {
-        margin-left: 0;
-        margin-right: 1rem;
+        margin: 0 10px; /* Juntamos un poco las opciones del menú */
     }
 
     .hero h1 {
         font-size: 2rem;
     }
 
-    .contenedor {
-        flex-direction: column;
+    .item, .servicio {
+        flex: 1 1 100%; /* Las cards ahora ocupan todo el ancho (1 columna) */
     }
 
     .imagenes-placeholder {
-        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+/* 3. MÓVIL PEQUEÑO (Pantallas muy estrechas, de 480px hacia abajo) */
+@media screen and (max-width: 480px) {
+    .nav-menu {
+        flex-direction: column; /* Apilamos las opciones del menú hacia abajo */
         align-items: center;
+        gap: 10px;
+    }
+    
+    #inicio {
+        padding-top: 10rem; /* Más espacio para evitar que el menú tape el contenido */
+    }
+
+    .placeholder {
+        width: 80px; /* Reducimos los cuadros para que quepan mejor */
+        height: 80px;
     }
 }
