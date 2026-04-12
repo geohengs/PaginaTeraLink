@@ -5,134 +5,715 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TeraLink - Ingeniería, Consultoría y Desarrollo de Software</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
+
+    <!-- HEADER -->
+    <header id="header">
         <nav class="navbar" aria-label="Navegación principal">
-            <a href="#inicio" class="logo">TeraLink</a>
+            <a href="#inicio" class="logo">Tera<span>Link</span></a>
             <button class="menu-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Abrir menú">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span></span><span></span><span></span>
             </button>
             <ul id="nav-menu" class="nav-menu">
                 <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
+                <li><a href="#sobre-nosotros">Nosotros</a></li>
+                <li><a href="#por-que-nosotros">¿Por qué elegirnos?</a></li>
                 <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#contacto" class="nav-cta">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
+
+        <!-- ═══════════════ HERO ═══════════════ -->
         <section id="inicio" class="hero">
-            <div class="hero-content">
-                <h1>TeraLink</h1>
-                <p class="eslogan">Innovando el futuro con tecnología avanzada</p>
-                <p class="descripcion">Desarrollamos soluciones de software a medida, brindando consultoría de primer nivel para impulsar el crecimiento tecnológico de tu empresa.</p>
+            <div class="hero-bg" aria-hidden="true">
+                <div class="hero-orb hero-orb--1"></div>
+                <div class="hero-orb hero-orb--2"></div>
+                <div class="hero-grid-lines"></div>
+            </div>
+            <div class="hero-inner">
+                <div class="hero-content fade-in">
+                    <span class="hero-badge">
+                        <i class="fas fa-circle" style="font-size:.45rem;vertical-align:middle;color:#4fa92d"></i>
+                        Tecnología · Innovación · Resultados
+                    </span>
+                    <h1>Soluciones de Software <em>a la medida</em> de tu empresa</h1>
+                    <p class="hero-desc">Desarrollamos sistemas robustos, brindamos consultoría tecnológica de primer nivel y gestionamos bases de datos para impulsar el crecimiento de tu negocio.</p>
+                    <div class="hero-actions">
+                        <a href="#servicios" class="btn-primary">Ver Servicios <i class="fas fa-arrow-right"></i></a>
+                        <a href="#contacto" class="btn-secondary">Contáctanos</a>
+                    </div>
+                    <div class="hero-tags">
+                        <span><i class="fas fa-check"></i> Ingeniería de Software</span>
+                        <span><i class="fas fa-check"></i> Consultoría Tech</span>
+                        <span><i class="fas fa-check"></i> Bases de Datos</span>
+                    </div>
+                </div>
+                <div class="hero-visual fade-in delay-1" aria-hidden="true">
+                    <div class="hv-card hv-card--code">
+                        <div class="hv-bar">
+                            <span class="hv-dot" style="background:#f59500"></span>
+                            <span class="hv-dot" style="background:#2074bc"></span>
+                            <span class="hv-dot" style="background:#4fa92d"></span>
+                            <span class="hv-filename">proyecto.js</span>
+                        </div>
+                        <div class="hv-code">
+                            <p><span class="ck">const</span> <span class="cv">client</span> = <span class="cf">TeraLink</span>({</p>
+                            <p>&nbsp;&nbsp;<span class="cs">servicio</span>: <span class="cstr">"software"</span>,</p>
+                            <p>&nbsp;&nbsp;<span class="cs">calidad</span>: <span class="cstr">"premium"</span>,</p>
+                            <p>&nbsp;&nbsp;<span class="cs">escala</span>: <span class="cn">Infinity</span></p>
+                            <p>});</p>
+                            <p>&nbsp;</p>
+                            <p><span class="ck">await</span> client.<span class="cf">deploy</span>();</p>
+                            <p><span class="cc">// ✓ Sistema online</span></p>
+                        </div>
+                    </div>
+                    <div class="hv-card hv-card--stat fade-in delay-2">
+                        <i class="fas fa-rocket"></i>
+                        <div><strong>50+</strong><span>Proyectos</span></div>
+                    </div>
+                    <div class="hv-card hv-card--badge fade-in delay-3">
+                        <i class="fas fa-shield-halved"></i>
+                        <span>Seguro &amp; Escalable</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-scroll" aria-hidden="true"><div class="scroll-chevron"></div></div>
+        </section>
+
+        <!-- ═══════════════ STATS ═══════════════ -->
+        <div class="stats-strip">
+            <div class="stats-grid">
+                <div class="stat-item fade-in">
+                    <span class="stat-number" data-target="50" data-suffix="+">50+</span>
+                    <span class="stat-label">Proyectos Entregados</span>
+                </div>
+                <div class="stat-item fade-in delay-1">
+                    <span class="stat-number" data-target="10" data-suffix="+">10+</span>
+                    <span class="stat-label">Años de Experiencia</span>
+                </div>
+                <div class="stat-item fade-in delay-2">
+                    <span class="stat-number" data-target="30" data-suffix="+">30+</span>
+                    <span class="stat-label">Clientes Satisfechos</span>
+                </div>
+                <div class="stat-item fade-in delay-3">
+                    <span class="stat-number" data-target="100" data-suffix="%">100%</span>
+                    <span class="stat-label">Compromiso</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ═══════════════ PROCESO (Carousel) ═══════════════ -->
+        <section class="proceso-section">
+            <div class="section-header fade-in">
+                <span class="section-badge">Nuestro Proceso</span>
+                <h2>Del concepto al producto final</h2>
+                <p class="section-sub">Acompañamos cada etapa con metodología clara y resultados medibles.</p>
+            </div>
+            <div class="carousel fade-in" aria-label="Fases del proceso">
+                <div class="carousel-track">
+                    <article class="carousel-slide active">
+                        <div class="slide-visual">
+                            <svg viewBox="0 0 700 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="700" height="300" fill="#0a1845"/>
+                                <rect x="24" y="24" width="652" height="40" rx="6" fill="#193892"/>
+                                <rect x="34" y="36" width="60" height="16" rx="3" fill="#f59500" opacity=".9"/>
+                                <rect x="500" y="38" width="50" height="12" rx="3" fill="#fff" opacity=".2"/>
+                                <rect x="558" y="38" width="50" height="12" rx="3" fill="#fff" opacity=".2"/>
+                                <rect x="616" y="36" width="50" height="16" rx="6" fill="#f59500" opacity=".3"/>
+                                <rect x="24" y="76" width="400" height="160" rx="6" fill="#193892"/>
+                                <rect x="40" y="100" width="200" height="20" rx="4" fill="#2074bc" opacity=".7"/>
+                                <rect x="40" y="128" width="280" height="12" rx="3" fill="#fff" opacity=".2"/>
+                                <rect x="40" y="148" width="240" height="12" rx="3" fill="#fff" opacity=".15"/>
+                                <rect x="40" y="176" width="90" height="32" rx="16" fill="#f59500" opacity=".8"/>
+                                <rect x="140" y="176" width="90" height="32" rx="16" fill="none" stroke="#fff" stroke-width="1.5" opacity=".4"/>
+                                <rect x="436" y="76" width="240" height="160" rx="6" fill="#193892"/>
+                                <circle cx="556" cy="132" r="36" fill="#2074bc" opacity=".2"/>
+                                <rect x="520" y="152" width="72" height="10" rx="3" fill="#fff" opacity=".1"/>
+                                <rect x="24" y="248" width="200" height="40" rx="6" fill="#193892"/>
+                                <rect x="234" y="248" width="200" height="40" rx="6" fill="#193892"/>
+                                <rect x="444" y="248" width="232" height="40" rx="6" fill="#193892"/>
+                                <rect x="38" y="260" width="80" height="8" rx="3" fill="#f59500" opacity=".7"/>
+                                <rect x="248" y="260" width="80" height="8" rx="3" fill="#f59500" opacity=".7"/>
+                                <rect x="458" y="260" width="80" height="8" rx="3" fill="#f59500" opacity=".7"/>
+                            </svg>
+                        </div>
+                        <div class="slide-content">
+                            <div class="slide-tag">Fase 01</div>
+                            <h3>Wireframes y Arquitectura</h3>
+                            <p>Definimos estructura, flujos de navegación y arquitectura de información antes de escribir una sola línea de código.</p>
+                        </div>
+                    </article>
+                    <article class="carousel-slide">
+                        <div class="slide-visual">
+                            <svg viewBox="0 0 700 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="700" height="300" fill="#0a1845"/>
+                                <circle cx="70" cy="80" r="40" fill="#193892"/>
+                                <circle cx="160" cy="80" r="40" fill="#2074bc"/>
+                                <circle cx="250" cy="80" r="40" fill="#f59500"/>
+                                <circle cx="340" cy="80" r="40" fill="#4fa92d"/>
+                                <text x="52" y="135" fill="#fff" font-size="10" opacity=".5" font-family="Poppins">Primario</text>
+                                <text x="138" y="135" fill="#fff" font-size="10" opacity=".5" font-family="Poppins">Secundario</text>
+                                <text x="230" y="135" fill="#fff" font-size="10" opacity=".5" font-family="Poppins">Acento</text>
+                                <text x="322" y="135" fill="#fff" font-size="10" opacity=".5" font-family="Poppins">Éxito</text>
+                                <rect x="420" y="30" width="260" height="140" rx="8" fill="#193892"/>
+                                <text x="440" y="62" fill="#f59500" font-size="24" font-weight="700" font-family="Poppins">TeraLink</text>
+                                <text x="440" y="86" fill="#fff" font-size="11" opacity=".4" font-family="Poppins">Poppins Bold 700</text>
+                                <rect x="440" y="100" width="200" height="2" fill="#2074bc" opacity=".3"/>
+                                <text x="440" y="122" fill="#fff" font-size="14" opacity=".7" font-family="Poppins">Título de sección</text>
+                                <text x="440" y="144" fill="#fff" font-size="11" opacity=".4" font-family="Poppins">Texto de cuerpo regular</text>
+                                <rect x="30" y="160" width="120" height="38" rx="19" fill="#f59500"/>
+                                <text x="56" y="184" fill="#193892" font-size="12" font-weight="700" font-family="Poppins">Primario</text>
+                                <rect x="164" y="160" width="120" height="38" rx="19" fill="none" stroke="#2074bc" stroke-width="2"/>
+                                <text x="189" y="184" fill="#2074bc" font-size="12" font-weight="600" font-family="Poppins">Secundario</text>
+                                <rect x="30" y="218" width="170" height="60" rx="8" fill="#193892"/>
+                                <rect x="42" y="230" width="50" height="8" rx="3" fill="#f59500" opacity=".8"/>
+                                <rect x="42" y="246" width="140" height="6" rx="3" fill="#fff" opacity=".2"/>
+                                <rect x="42" y="260" width="110" height="6" rx="3" fill="#fff" opacity=".15"/>
+                                <rect x="214" y="218" width="170" height="60" rx="8" fill="#2074bc" opacity=".25"/>
+                                <rect x="226" y="230" width="50" height="8" rx="3" fill="#f59500" opacity=".8"/>
+                                <rect x="226" y="246" width="140" height="6" rx="3" fill="#fff" opacity=".2"/>
+                            </svg>
+                        </div>
+                        <div class="slide-content">
+                            <div class="slide-tag">Fase 02</div>
+                            <h3>Sistema de Diseño y Componentes UI</h3>
+                            <p>Definimos paleta, tipografía, botones y guía de estilos que garantizan consistencia visual en todo el producto.</p>
+                        </div>
+                    </article>
+                    <article class="carousel-slide">
+                        <div class="slide-visual">
+                            <svg viewBox="0 0 700 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="700" height="300" fill="#0a1845"/>
+                                <rect x="24" y="18" width="652" height="264" rx="10" fill="#193892"/>
+                                <rect x="24" y="18" width="652" height="32" rx="10" fill="#0d1f5c"/>
+                                <circle cx="44" cy="34" r="6" fill="#f59500" opacity=".7"/>
+                                <circle cx="62" cy="34" r="6" fill="#2074bc" opacity=".7"/>
+                                <circle cx="80" cy="34" r="6" fill="#4fa92d" opacity=".7"/>
+                                <rect x="100" y="24" width="380" height="20" rx="4" fill="#193892"/>
+                                <text x="115" y="38" fill="#fff" opacity=".3" font-size="10" font-family="Poppins">https://teralink.gt</text>
+                                <rect x="24" y="50" width="652" height="28" fill="#0d1f5c"/>
+                                <rect x="36" y="58" width="50" height="12" rx="3" fill="#f59500" opacity=".9"/>
+                                <rect x="300" y="60" width="40" height="8" rx="3" fill="#fff" opacity=".3"/>
+                                <rect x="350" y="60" width="50" height="8" rx="3" fill="#fff" opacity=".3"/>
+                                <rect x="410" y="60" width="50" height="8" rx="3" fill="#fff" opacity=".3"/>
+                                <rect x="600" y="56" width="62" height="16" rx="8" fill="#f59500" opacity=".8"/>
+                                <rect x="36" y="90" width="300" height="110" rx="6" fill="#0d1f5c"/>
+                                <rect x="50" y="105" width="180" height="18" rx="4" fill="#f59500" opacity=".8"/>
+                                <rect x="50" y="131" width="260" height="8" rx="3" fill="#fff" opacity=".2"/>
+                                <rect x="50" y="147" width="220" height="8" rx="3" fill="#fff" opacity=".15"/>
+                                <rect x="50" y="170" width="80" height="22" rx="11" fill="#f59500"/>
+                                <rect x="140" y="170" width="80" height="22" rx="11" fill="none" stroke="#fff" stroke-width="1.5" opacity=".4"/>
+                                <rect x="348" y="90" width="316" height="110" rx="6" fill="#2074bc" opacity=".18"/>
+                                <circle cx="506" cy="145" r="38" fill="#193892"/>
+                                <text x="488" y="150" fill="#f59500" font-size="14" font-family="Poppins" font-weight="700">TL</text>
+                                <rect x="36" y="215" width="194" height="55" rx="6" fill="#0d1f5c"/>
+                                <rect x="242" y="215" width="194" height="55" rx="6" fill="#0d1f5c"/>
+                                <rect x="448" y="215" width="214" height="55" rx="6" fill="#0d1f5c"/>
+                                <rect x="50" y="225" width="70" height="8" rx="3" fill="#f59500" opacity=".8"/>
+                                <rect x="256" y="225" width="70" height="8" rx="3" fill="#f59500" opacity=".8"/>
+                                <rect x="462" y="225" width="70" height="8" rx="3" fill="#f59500" opacity=".8"/>
+                                <rect x="50" y="241" width="150" height="6" rx="3" fill="#fff" opacity=".15"/>
+                                <rect x="256" y="241" width="150" height="6" rx="3" fill="#fff" opacity=".15"/>
+                                <rect x="462" y="241" width="180" height="6" rx="3" fill="#fff" opacity=".15"/>
+                            </svg>
+                        </div>
+                        <div class="slide-content">
+                            <div class="slide-tag">Fase 03</div>
+                            <h3>Mockup de Alta Fidelidad y Entrega</h3>
+                            <p>Diseño final pixel-perfect, validado con el cliente, con especificaciones técnicas y activos listos para desarrollo.</p>
+                        </div>
+                    </article>
+                </div>
+                <button class="carousel-button prev" aria-label="Anterior">&#8249;</button>
+                <button class="carousel-button next" aria-label="Siguiente">&#8250;</button>
+                <div class="carousel-indicators" role="tablist">
+                    <button class="indicator active" data-slide="0" aria-label="Fase 1" aria-selected="true"></button>
+                    <button class="indicator" data-slide="1" aria-label="Fase 2" aria-selected="false"></button>
+                    <button class="indicator" data-slide="2" aria-label="Fase 3" aria-selected="false"></button>
+                </div>
             </div>
         </section>
 
-        <section class="carousel-section">
-            <div class="carousel" aria-label="Carrusel de prototipo interactivo">
-            <div class="carousel-track">
-                <article class="carousel-slide active">
-                    <div class="image-placeholder">
-                        <div class="image-stub">
-                            <p>Imagen pendiente</p>
-                            <small>Se agregará contenido gráfico del prototipo</small>
+        <!-- ═══════════════ SOBRE NOSOTROS ═══════════════ -->
+        <section id="sobre-nosotros">
+            <div class="section-header fade-in">
+                <span class="section-badge">Quiénes Somos</span>
+                <h2>Sobre Nosotros</h2>
+                <p class="section-sub">Un equipo comprometido con la excelencia tecnológica y el éxito de cada cliente.</p>
+            </div>
+            <div class="contenedor">
+                <div class="card fade-in">
+                    <div class="card-icon"><i class="fas fa-bullseye"></i></div>
+                    <h3>Misión</h3>
+                    <p>Proveer soluciones tecnológicas innovadoras que optimicen los procesos de nuestros clientes, garantizando calidad y eficiencia en cada desarrollo.</p>
+                </div>
+                <div class="card fade-in delay-1">
+                    <div class="card-icon"><i class="fas fa-eye"></i></div>
+                    <h3>Visión</h3>
+                    <p>Ser la empresa líder en consultoría e ingeniería de software a nivel regional, reconocida por nuestra excelencia y compromiso con la vanguardia tecnológica.</p>
+                </div>
+                <div class="card fade-in delay-2">
+                    <div class="card-icon"><i class="fas fa-star"></i></div>
+                    <h3>Valores</h3>
+                    <p>Innovación, Integridad, Trabajo en Equipo, Calidad y Compromiso con el cliente guían cada uno de nuestros proyectos.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════ POR QUÉ ELEGIRNOS ═══════════════ -->
+        <section id="por-que-nosotros" class="why-section">
+            <div class="section-header fade-in">
+                <span class="section-badge">Nuestra Ventaja</span>
+                <h2>¿Por qué elegirnos?</h2>
+                <p class="section-sub">Combinamos experiencia técnica con atención personalizada para garantizar resultados reales.</p>
+            </div>
+            <div class="why-grid">
+                <div class="why-item fade-in">
+                    <div class="why-icon"><i class="fas fa-shield-halved"></i></div>
+                    <h4>Soluciones Seguras</h4>
+                    <p>Implementamos buenas prácticas de seguridad en cada capa del sistema, protegiendo tus datos y los de tus usuarios.</p>
+                </div>
+                <div class="why-item fade-in delay-1">
+                    <div class="why-icon"><i class="fas fa-bolt"></i></div>
+                    <h4>Alta Eficiencia</h4>
+                    <p>Optimizamos cada proyecto para máximo rendimiento, reduciendo tiempos de respuesta y costos operativos.</p>
+                </div>
+                <div class="why-item fade-in delay-2">
+                    <div class="why-icon"><i class="fas fa-headset"></i></div>
+                    <h4>Soporte Continuo</h4>
+                    <p>No entregamos y desaparecemos. Ofrecemos acompañamiento post-lanzamiento y mantenimiento preventivo.</p>
+                </div>
+                <div class="why-item fade-in delay-3">
+                    <div class="why-icon"><i class="fas fa-expand-arrows-alt"></i></div>
+                    <h4>Escalabilidad</h4>
+                    <p>Diseñamos pensando en el crecimiento. Tu solución crece contigo sin necesidad de reemplazarla desde cero.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════ SERVICIOS ═══════════════ -->
+        <section id="servicios">
+            <div class="section-header fade-in">
+                <span class="section-badge">Lo que hacemos</span>
+                <h2>Nuestros Servicios</h2>
+                <p class="section-sub">Haz clic en cualquier servicio para conocer más detalles y ver ejemplos de nuestro trabajo.</p>
+            </div>
+            <div class="servicios-grid">
+
+                <!-- Servicio 1 -->
+                <div class="svc-card fade-in" id="svc-software">
+                    <div class="svc-base">
+                        <div class="svc-icon"><i class="fas fa-code"></i></div>
+                        <div class="svc-info">
+                            <h3>Ingeniería de Software</h3>
+                            <p>Desarrollo de sistemas robustos, escalables y seguros adaptados a tu modelo de negocio.</p>
+                        </div>
+                        <button class="svc-toggle" aria-expanded="false" aria-controls="body-software">
+                            <span>Ver más</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                    <div class="svc-body" id="body-software" aria-hidden="true">
+                        <div class="svc-body-inner">
+                            <div class="svc-cols">
+                                <div class="svc-text">
+                                    <h4>¿Qué incluye?</h4>
+                                    <ul class="svc-list">
+                                        <li><i class="fas fa-check-circle"></i> Desarrollo web y aplicaciones móviles</li>
+                                        <li><i class="fas fa-check-circle"></i> APIs REST y microservicios</li>
+                                        <li><i class="fas fa-check-circle"></i> Arquitectura de software a medida</li>
+                                        <li><i class="fas fa-check-circle"></i> Integración con sistemas existentes</li>
+                                        <li><i class="fas fa-check-circle"></i> Pruebas y control de calidad (QA)</li>
+                                        <li><i class="fas fa-check-circle"></i> Despliegue y documentación técnica</li>
+                                    </ul>
+                                </div>
+                                <div class="mini-carousel">
+                                    <div class="mini-track">
+                                        <div class="mini-slide active">
+                                            <svg viewBox="0 0 320 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <rect width="320" height="180" fill="#0d1f5c"/>
+                                                <rect x="10" y="10" width="300" height="160" rx="8" fill="#193892"/>
+                                                <rect x="10" y="10" width="300" height="24" rx="8" fill="#0a1845"/>
+                                                <circle cx="24" cy="22" r="4" fill="#f59500" opacity=".8"/>
+                                                <circle cx="36" cy="22" r="4" fill="#2074bc" opacity=".8"/>
+                                                <circle cx="48" cy="22" r="4" fill="#4fa92d" opacity=".8"/>
+                                                <text x="64" y="26" fill="#fff" opacity=".3" font-size="8" font-family="Poppins">app.teralink.gt</text>
+                                                <rect x="20" y="46" width="56" height="6" rx="2" fill="#f59500" opacity=".8"/>
+                                                <rect x="20" y="60" width="180" height="5" rx="2" fill="#fff" opacity=".2"/>
+                                                <rect x="20" y="72" width="150" height="5" rx="2" fill="#fff" opacity=".15"/>
+                                                <rect x="20" y="90" width="66" height="20" rx="10" fill="#f59500"/>
+                                                <text x="30" y="104" fill="#193892" font-size="9" font-weight="700" font-family="Poppins">Empezar</text>
+                                                <rect x="192" y="44" width="106" height="116" rx="6" fill="#0a1845"/>
+                                                <rect x="202" y="56" width="60" height="6" rx="2" fill="#2074bc" opacity=".6"/>
+                                                <rect x="202" y="70" width="86" height="4" rx="2" fill="#fff" opacity=".2"/>
+                                                <rect x="202" y="82" width="70" height="4" rx="2" fill="#fff" opacity=".15"/>
+                                                <rect x="202" y="108" width="86" height="40" rx="4" fill="#193892"/>
+                                                <rect x="210" y="118" width="40" height="5" rx="2" fill="#f59500" opacity=".6"/>
+                                                <rect x="210" y="130" width="66" height="4" rx="2" fill="#fff" opacity=".2"/>
+                                                <rect x="20" y="124" width="160" height="28" rx="5" fill="#0a1845"/>
+                                                <rect x="30" y="134" width="50" height="5" rx="2" fill="#2074bc" opacity=".5"/>
+                                                <rect x="30" y="146" width="126" height="4" rx="2" fill="#fff" opacity=".15"/>
+                                                <text x="18" y="172" fill="#f59500" opacity=".6" font-size="7" font-family="Poppins">Desarrollo Web y Aplicaciones Móviles</text>
+                                            </svg>
+                                            <div class="mini-cap">Desarrollo Web y Móvil</div>
+                                        </div>
+                                        <div class="mini-slide">
+                                            <svg viewBox="0 0 320 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <rect width="320" height="180" fill="#0d1f5c"/>
+                                                <circle cx="160" cy="88" r="28" fill="#193892" stroke="#f59500" stroke-width="2"/>
+                                                <text x="148" y="93" fill="#f59500" font-size="10" font-weight="700" font-family="Poppins">API</text>
+                                                <rect x="14" y="52" width="76" height="32" rx="6" fill="#193892"/>
+                                                <text x="28" y="72" fill="#2074bc" font-size="9" font-family="Poppins">Web App</text>
+                                                <rect x="14" y="97" width="76" height="32" rx="6" fill="#193892"/>
+                                                <text x="22" y="117" fill="#2074bc" font-size="9" font-family="Poppins">Mobile App</text>
+                                                <rect x="230" y="30" width="82" height="32" rx="6" fill="#193892"/>
+                                                <text x="236" y="50" fill="#4fa92d" font-size="8" font-family="Poppins">Base de Datos</text>
+                                                <rect x="230" y="72" width="82" height="32" rx="6" fill="#193892"/>
+                                                <text x="240" y="92" fill="#4fa92d" font-size="8" font-family="Poppins">Servicios 3rd</text>
+                                                <rect x="230" y="114" width="82" height="32" rx="6" fill="#193892"/>
+                                                <text x="244" y="134" fill="#4fa92d" font-size="8" font-family="Poppins">Microservicio</text>
+                                                <line x1="90" y1="68" x2="132" y2="82" stroke="#2074bc" stroke-width="1.5" opacity=".6" stroke-dasharray="4 3"/>
+                                                <line x1="90" y1="113" x2="132" y2="98" stroke="#2074bc" stroke-width="1.5" opacity=".6" stroke-dasharray="4 3"/>
+                                                <line x1="188" y1="76" x2="230" y2="50" stroke="#4fa92d" stroke-width="1.5" opacity=".6" stroke-dasharray="4 3"/>
+                                                <line x1="188" y1="88" x2="230" y2="88" stroke="#4fa92d" stroke-width="1.5" opacity=".6" stroke-dasharray="4 3"/>
+                                                <line x1="188" y1="100" x2="230" y2="128" stroke="#4fa92d" stroke-width="1.5" opacity=".6" stroke-dasharray="4 3"/>
+                                                <text x="100" y="172" fill="#f59500" opacity=".6" font-size="7" font-family="Poppins">Arquitectura de APIs y Microservicios</text>
+                                            </svg>
+                                            <div class="mini-cap">APIs y Microservicios</div>
+                                        </div>
+                                        <div class="mini-slide">
+                                            <svg viewBox="0 0 320 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <rect width="320" height="180" fill="#0d1f5c"/>
+                                                <rect x="10" y="68" width="58" height="38" rx="6" fill="#193892"/>
+                                                <text x="20" y="91" fill="#2074bc" font-size="9" font-family="Poppins">Código</text>
+                                                <line x1="68" y1="87" x2="88" y2="87" stroke="#f59500" stroke-width="2"/>
+                                                <polygon points="88,82 98,87 88,92" fill="#f59500"/>
+                                                <rect x="98" y="68" width="58" height="38" rx="6" fill="#193892"/>
+                                                <text x="106" y="91" fill="#2074bc" font-size="9" font-family="Poppins">Build CI</text>
+                                                <line x1="156" y1="87" x2="176" y2="87" stroke="#f59500" stroke-width="2"/>
+                                                <polygon points="176,82 186,87 176,92" fill="#f59500"/>
+                                                <rect x="186" y="68" width="58" height="38" rx="6" fill="#193892"/>
+                                                <text x="196" y="91" fill="#2074bc" font-size="9" font-family="Poppins">Test QA</text>
+                                                <line x1="244" y1="87" x2="264" y2="87" stroke="#f59500" stroke-width="2"/>
+                                                <polygon points="264,82 274,87 264,92" fill="#f59500"/>
+                                                <rect x="274" y="68" width="38" height="38" rx="6" fill="#4fa92d" opacity=".8"/>
+                                                <text x="280" y="91" fill="#fff" font-size="9" font-family="Poppins">Live</text>
+                                                <rect x="10" y="120" width="58" height="16" rx="8" fill="#4fa92d" opacity=".15"/>
+                                                <text x="18" y="132" fill="#4fa92d" font-size="7" font-family="Poppins">✓ passed</text>
+                                                <rect x="98" y="120" width="58" height="16" rx="8" fill="#4fa92d" opacity=".15"/>
+                                                <text x="106" y="132" fill="#4fa92d" font-size="7" font-family="Poppins">✓ passed</text>
+                                                <rect x="186" y="120" width="58" height="16" rx="8" fill="#4fa92d" opacity=".15"/>
+                                                <text x="194" y="132" fill="#4fa92d" font-size="7" font-family="Poppins">✓ passed</text>
+                                                <rect x="274" y="120" width="38" height="16" rx="8" fill="#f59500" opacity=".15"/>
+                                                <text x="280" y="132" fill="#f59500" font-size="7" font-family="Poppins">online</text>
+                                                <text x="86" y="172" fill="#f59500" opacity=".6" font-size="7" font-family="Poppins">Pipeline CI/CD y Despliegue Automatizado</text>
+                                            </svg>
+                                            <div class="mini-cap">Pipeline CI/CD</div>
+                                        </div>
+                                    </div>
+                                    <button class="mprev" aria-label="Anterior">&#8249;</button>
+                                    <button class="mnext" aria-label="Siguiente">&#8250;</button>
+                                    <div class="mdots">
+                                        <button class="mdot active"></button>
+                                        <button class="mdot"></button>
+                                        <button class="mdot"></button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="slide-content">
-                        <h3>Flujo principal</h3>
-                        <p>Vista de la estructura de baja fidelidad y navegación inicial.</p>
+                </div>
+
+                <!-- Servicio 2 -->
+                <div class="svc-card svc-card--featured fade-in delay-1" id="svc-consultoria">
+                    <div class="svc-base">
+                        <div class="svc-icon"><i class="fas fa-lightbulb"></i></div>
+                        <div class="svc-info">
+                            <h3>Consultoría Tecnológica</h3>
+                            <p>Asesoría experta para la transformación digital y la adopción inteligente de tecnología.</p>
+                        </div>
+                        <button class="svc-toggle" aria-expanded="false" aria-controls="body-consultoria">
+                            <span>Ver más</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
                     </div>
-                </article>
-                <article class="carousel-slide">
-                    <div class="image-placeholder">
-                        <div class="image-stub">
-                            <p>Imagen pendiente</p>
-                            <small>Se agregará componentes UX finales</small>
+                    <div class="svc-body" id="body-consultoria" aria-hidden="true">
+                        <div class="svc-body-inner">
+                            <div class="svc-cols">
+                                <div class="svc-text">
+                                    <h4>¿Qué incluye?</h4>
+                                    <ul class="svc-list">
+                                        <li><i class="fas fa-check-circle"></i> Auditoría y diagnóstico tecnológico</li>
+                                        <li><i class="fas fa-check-circle"></i> Estrategia de transformación digital</li>
+                                        <li><i class="fas fa-check-circle"></i> Optimización de infraestructura IT</li>
+                                        <li><i class="fas fa-check-circle"></i> Selección e implementación de herramientas</li>
+                                        <li><i class="fas fa-check-circle"></i> Capacitación y transferencia de conocimiento</li>
+                                        <li><i class="fas fa-check-circle"></i> Roadmap tecnológico personalizado</li>
+                                    </ul>
+                                </div>
+                                <div class="mini-carousel">
+                                    <div class="mini-track">
+                                        <div class="mini-slide active">
+                                            <svg viewBox="0 0 320 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <rect width="320" height="180" fill="#0d1f5c"/>
+                                                <text x="18" y="24" fill="#f59500" font-size="9" font-weight="700" font-family="Poppins">Crecimiento post-diagnóstico</text>
+                                                <rect x="30" y="128" width="26" height="38" rx="3" fill="#2074bc" opacity=".5"/>
+                                                <rect x="66" y="98" width="26" height="68" rx="3" fill="#2074bc" opacity=".6"/>
+                                                <rect x="102" y="78" width="26" height="88" rx="3" fill="#f59500" opacity=".7"/>
+                                                <rect x="138" y="58" width="26" height="108" rx="3" fill="#f59500" opacity=".8"/>
+                                                <rect x="174" y="38" width="26" height="128" rx="3" fill="#4fa92d" opacity=".7"/>
+                                                <rect x="210" y="28" width="26" height="138" rx="3" fill="#4fa92d" opacity=".9"/>
+                                                <line x1="18" y1="168" x2="260" y2="168" stroke="#fff" stroke-width="1" opacity=".15"/>
+                                                <rect x="270" y="30" width="44" height="34" rx="5" fill="#193892"/>
+                                                <text x="276" y="48" fill="#4fa92d" font-size="13" font-weight="700" font-family="Poppins">+62%</text>
+                                                <text x="276" y="58" fill="#fff" opacity=".5" font-size="7" font-family="Poppins">eficiencia</text>
+                                                <rect x="270" y="72" width="44" height="34" rx="5" fill="#193892"/>
+                                                <text x="276" y="90" fill="#f59500" font-size="13" font-weight="700" font-family="Poppins">-38%</text>
+                                                <text x="276" y="100" fill="#fff" opacity=".5" font-size="7" font-family="Poppins">costos</text>
+                                                <text x="30" y="178" fill="#fff" opacity=".3" font-size="7" font-family="Poppins">Ene&nbsp;&nbsp;&nbsp;Feb&nbsp;&nbsp;&nbsp;Mar&nbsp;&nbsp;&nbsp;Abr&nbsp;&nbsp;&nbsp;May&nbsp;&nbsp;&nbsp;Jun</text>
+                                            </svg>
+                                            <div class="mini-cap">Auditoría y Resultados</div>
+                                        </div>
+                                        <div class="mini-slide">
+                                            <svg viewBox="0 0 320 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <rect width="320" height="180" fill="#0d1f5c"/>
+                                                <rect x="14" y="85" width="292" height="4" rx="2" fill="#193892"/>
+                                                <circle cx="42" cy="87" r="10" fill="#f59500"/>
+                                                <text x="35" y="91" fill="#193892" font-size="8" font-weight="700" font-family="Poppins">Q1</text>
+                                                <rect x="20" y="104" width="58" height="30" rx="5" fill="#193892"/>
+                                                <text x="26" y="118" fill="#f59500" font-size="7" font-family="Poppins">Diagnóstico</text>
+                                                <text x="26" y="128" fill="#fff" opacity=".4" font-size="6" font-family="Poppins">Auditoría IT</text>
+                                                <circle cx="122" cy="87" r="10" fill="#2074bc"/>
+                                                <text x="115" y="91" fill="#fff" font-size="8" font-weight="700" font-family="Poppins">Q2</text>
+                                                <rect x="100" y="104" width="62" height="30" rx="5" fill="#193892"/>
+                                                <text x="106" y="118" fill="#2074bc" font-size="7" font-family="Poppins">Estrategia</text>
+                                                <text x="104" y="128" fill="#fff" opacity=".4" font-size="6" font-family="Poppins">Roadmap tech</text>
+                                                <circle cx="202" cy="87" r="10" fill="#2074bc"/>
+                                                <text x="195" y="91" fill="#fff" font-size="8" font-weight="700" font-family="Poppins">Q3</text>
+                                                <rect x="178" y="104" width="62" height="30" rx="5" fill="#193892"/>
+                                                <text x="182" y="118" fill="#2074bc" font-size="7" font-family="Poppins">Ejecución</text>
+                                                <text x="185" y="128" fill="#fff" opacity=".4" font-size="6" font-family="Poppins">Implementar</text>
+                                                <circle cx="282" cy="87" r="10" fill="#4fa92d"/>
+                                                <text x="275" y="91" fill="#fff" font-size="8" font-weight="700" font-family="Poppins">Q4</text>
+                                                <rect x="258" y="104" width="52" height="30" rx="5" fill="#193892"/>
+                                                <text x="262" y="118" fill="#4fa92d" font-size="7" font-family="Poppins">Resultado</text>
+                                                <text x="266" y="128" fill="#fff" opacity=".4" font-size="6" font-family="Poppins">Go-live</text>
+                                                <text x="90" y="170" fill="#f59500" opacity=".6" font-size="7" font-family="Poppins">Roadmap de Transformación Digital</text>
+                                            </svg>
+                                            <div class="mini-cap">Roadmap Tecnológico</div>
+                                        </div>
+                                        <div class="mini-slide">
+                                            <svg viewBox="0 0 320 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <rect width="320" height="180" fill="#0d1f5c"/>
+                                                <rect x="110" y="16" width="100" height="48" rx="10" fill="#193892" stroke="#2074bc" stroke-width="1.5"/>
+                                                <text x="140" y="44" fill="#2074bc" font-size="11" font-family="Poppins">☁ Cloud</text>
+                                                <line x1="160" y1="64" x2="68" y2="100" stroke="#f59500" stroke-width="1.5" opacity=".6" stroke-dasharray="5 3"/>
+                                                <line x1="160" y1="64" x2="160" y2="100" stroke="#f59500" stroke-width="1.5" opacity=".6" stroke-dasharray="5 3"/>
+                                                <line x1="160" y1="64" x2="254" y2="100" stroke="#f59500" stroke-width="1.5" opacity=".6" stroke-dasharray="5 3"/>
+                                                <rect x="30" y="100" width="76" height="40" rx="6" fill="#193892"/>
+                                                <text x="38" y="118" fill="#fff" opacity=".7" font-size="8" font-family="Poppins">Servidor Web</text>
+                                                <text x="46" y="132" fill="#4fa92d" font-size="7" font-family="Poppins">● activo</text>
+                                                <rect x="122" y="100" width="76" height="40" rx="6" fill="#193892"/>
+                                                <text x="126" y="118" fill="#fff" opacity=".7" font-size="8" font-family="Poppins">Load Balancer</text>
+                                                <text x="138" y="132" fill="#4fa92d" font-size="7" font-family="Poppins">● activo</text>
+                                                <rect x="214" y="100" width="76" height="40" rx="6" fill="#193892"/>
+                                                <text x="218" y="118" fill="#fff" opacity=".7" font-size="8" font-family="Poppins">Base de Datos</text>
+                                                <text x="230" y="132" fill="#4fa92d" font-size="7" font-family="Poppins">● activo</text>
+                                                <rect x="30" y="152" width="260" height="16" rx="4" fill="#4fa92d" opacity=".08"/>
+                                                <text x="68" y="164" fill="#4fa92d" font-size="8" font-family="Poppins">✓ Infraestructura optimizada · Uptime 99.9%</text>
+                                            </svg>
+                                            <div class="mini-cap">Optimización de Infraestructura</div>
+                                        </div>
+                                    </div>
+                                    <button class="mprev" aria-label="Anterior">&#8249;</button>
+                                    <button class="mnext" aria-label="Siguiente">&#8250;</button>
+                                    <div class="mdots">
+                                        <button class="mdot active"></button>
+                                        <button class="mdot"></button>
+                                        <button class="mdot"></button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="slide-content">
-                        <h3>Componentes UI</h3>
-                        <p>Botones, cards y consistencia visual con paleta y tipografía.</p>
+                </div>
+
+                <!-- Servicio 3 -->
+                <div class="svc-card fade-in delay-2" id="svc-datos">
+                    <div class="svc-base">
+                        <div class="svc-icon"><i class="fas fa-database"></i></div>
+                        <div class="svc-info">
+                            <h3>Gestión de Bases de Datos</h3>
+                            <p>Diseño, optimización y administración de bases de datos para máximo rendimiento y seguridad.</p>
+                        </div>
+                        <button class="svc-toggle" aria-expanded="false" aria-controls="body-datos">
+                            <span>Ver más</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
                     </div>
-                </article>
-                <article class="carousel-slide">
-                    <div class="image-placeholder">
-                        <div class="image-stub">
-                            <p>Imagen pendiente</p>
-                            <small>Se agregará mockup de alta fidelidad</small>
+                    <div class="svc-body" id="body-datos" aria-hidden="true">
+                        <div class="svc-body-inner">
+                            <div class="svc-cols">
+                                <div class="svc-text">
+                                    <h4>¿Qué incluye?</h4>
+                                    <ul class="svc-list">
+                                        <li><i class="fas fa-check-circle"></i> Diseño de BD relacionales y NoSQL</li>
+                                        <li><i class="fas fa-check-circle"></i> Optimización de consultas y rendimiento</li>
+                                        <li><i class="fas fa-check-circle"></i> Migración y consolidación de datos</li>
+                                        <li><i class="fas fa-check-circle"></i> Respaldo y recuperación ante desastres</li>
+                                        <li><i class="fas fa-check-circle"></i> Monitoreo y alertas en tiempo real</li>
+                                        <li><i class="fas fa-check-circle"></i> Seguridad y control de acceso a datos</li>
+                                    </ul>
+                                </div>
+                                <div class="mini-carousel">
+                                    <div class="mini-track">
+                                        <div class="mini-slide active">
+                                            <svg viewBox="0 0 320 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <rect width="320" height="180" fill="#0d1f5c"/>
+                                                <rect x="14" y="26" width="96" height="90" rx="6" fill="#193892"/>
+                                                <rect x="14" y="26" width="96" height="18" rx="6" fill="#2074bc" opacity=".7"/>
+                                                <text x="28" y="39" fill="#fff" font-size="8" font-weight="700" font-family="Poppins">USUARIOS</text>
+                                                <text x="22" y="56" fill="#f59500" font-size="7" font-family="Poppins">🔑 id_usuario</text>
+                                                <text x="22" y="69" fill="#fff" opacity=".5" font-size="7" font-family="Poppins">nombre</text>
+                                                <text x="22" y="82" fill="#fff" opacity=".5" font-size="7" font-family="Poppins">correo</text>
+                                                <text x="22" y="95" fill="#fff" opacity=".5" font-size="7" font-family="Poppins">fecha_registro</text>
+                                                <rect x="210" y="26" width="96" height="90" rx="6" fill="#193892"/>
+                                                <rect x="210" y="26" width="96" height="18" rx="6" fill="#2074bc" opacity=".7"/>
+                                                <text x="222" y="39" fill="#fff" font-size="8" font-weight="700" font-family="Poppins">PROYECTOS</text>
+                                                <text x="218" y="56" fill="#f59500" font-size="7" font-family="Poppins">🔑 id_proyecto</text>
+                                                <text x="218" y="69" fill="#fff" opacity=".5" font-size="7" font-family="Poppins">nombre</text>
+                                                <text x="218" y="82" fill="#fff" opacity=".5" font-size="7" font-family="Poppins">estado</text>
+                                                <text x="218" y="95" fill="#fff" opacity=".5" font-size="7" font-family="Poppins">🔗 id_usuario</text>
+                                                <rect x="112" y="100" width="96" height="68" rx="6" fill="#193892"/>
+                                                <rect x="112" y="100" width="96" height="18" rx="6" fill="#f59500" opacity=".7"/>
+                                                <text x="130" y="113" fill="#193892" font-size="8" font-weight="700" font-family="Poppins">SERVICIOS</text>
+                                                <text x="120" y="132" fill="#f59500" font-size="7" font-family="Poppins">🔑 id_servicio</text>
+                                                <text x="120" y="145" fill="#fff" opacity=".5" font-size="7" font-family="Poppins">tipo</text>
+                                                <text x="120" y="158" fill="#fff" opacity=".5" font-size="7" font-family="Poppins">descripcion</text>
+                                                <line x1="110" y1="71" x2="210" y2="71" stroke="#f59500" stroke-width="1.5" opacity=".5" stroke-dasharray="4 3"/>
+                                                <line x1="66" y1="116" x2="120" y2="116" stroke="#2074bc" stroke-width="1.5" opacity=".5" stroke-dasharray="4 3"/>
+                                                <line x1="250" y1="116" x2="208" y2="134" stroke="#2074bc" stroke-width="1.5" opacity=".5" stroke-dasharray="4 3"/>
+                                            </svg>
+                                            <div class="mini-cap">Diseño de Base de Datos (ER)</div>
+                                        </div>
+                                        <div class="mini-slide">
+                                            <svg viewBox="0 0 320 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <rect width="320" height="180" fill="#0d1f5c"/>
+                                                <text x="18" y="24" fill="#f59500" font-size="9" font-weight="700" font-family="Poppins">Monitor de Rendimiento</text>
+                                                <polyline points="20,140 60,120 100,130 140,90 180,100 220,70 260,60 300,44" stroke="#f59500" stroke-width="2" fill="none"/>
+                                                <polyline points="20,140 60,120 100,130 140,90 180,100 220,70 260,60 300,44 300,155 20,155" fill="#f59500" fill-opacity=".06"/>
+                                                <line x1="20" y1="50" x2="300" y2="50" stroke="#fff" stroke-width=".5" opacity=".08"/>
+                                                <line x1="20" y1="80" x2="300" y2="80" stroke="#fff" stroke-width=".5" opacity=".08"/>
+                                                <line x1="20" y1="110" x2="300" y2="110" stroke="#fff" stroke-width=".5" opacity=".08"/>
+                                                <line x1="20" y1="140" x2="300" y2="140" stroke="#fff" stroke-width=".5" opacity=".08"/>
+                                                <rect x="18" y="158" width="66" height="18" rx="4" fill="#193892"/>
+                                                <text x="24" y="171" fill="#4fa92d" font-size="7.5" font-family="Poppins">Consultas: 8ms</text>
+                                                <rect x="92" y="158" width="76" height="18" rx="4" fill="#193892"/>
+                                                <text x="98" y="171" fill="#2074bc" font-size="7.5" font-family="Poppins">Cache: 94% hit</text>
+                                                <rect x="176" y="158" width="62" height="18" rx="4" fill="#193892"/>
+                                                <text x="182" y="171" fill="#f59500" font-size="7.5" font-family="Poppins">CPU: 12%</text>
+                                                <rect x="246" y="158" width="56" height="18" rx="4" fill="#193892"/>
+                                                <text x="250" y="171" fill="#4fa92d" font-size="7.5" font-family="Poppins">RAM: 34%</text>
+                                            </svg>
+                                            <div class="mini-cap">Optimización y Monitoreo</div>
+                                        </div>
+                                        <div class="mini-slide">
+                                            <svg viewBox="0 0 320 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <rect width="320" height="180" fill="#0d1f5c"/>
+                                                <rect x="110" y="16" width="100" height="58" rx="8" fill="#193892" stroke="#f59500" stroke-width="2"/>
+                                                <ellipse cx="160" cy="32" rx="40" ry="11" fill="#2074bc" opacity=".3"/>
+                                                <ellipse cx="160" cy="46" rx="40" ry="11" fill="#2074bc" opacity=".2"/>
+                                                <ellipse cx="160" cy="60" rx="40" ry="11" fill="#2074bc" opacity=".15"/>
+                                                <text x="136" y="80" fill="#f59500" font-size="7.5" font-weight="700" font-family="Poppins">BD Principal</text>
+                                                <line x1="120" y1="96" x2="56" y2="122" stroke="#4fa92d" stroke-width="2" opacity=".7" stroke-dasharray="5 3"/>
+                                                <polygon points="56,122 48,116 64,116" fill="#4fa92d" opacity=".7"/>
+                                                <line x1="200" y1="96" x2="264" y2="122" stroke="#4fa92d" stroke-width="2" opacity=".7" stroke-dasharray="5 3"/>
+                                                <polygon points="264,122 256,116 272,116" fill="#4fa92d" opacity=".7"/>
+                                                <line x1="160" y1="96" x2="160" y2="122" stroke="#2074bc" stroke-width="2" opacity=".7" stroke-dasharray="5 3"/>
+                                                <polygon points="160,122 152,116 168,116" fill="#2074bc" opacity=".7"/>
+                                                <rect x="16" y="122" width="84" height="42" rx="6" fill="#193892"/>
+                                                <text x="28" y="140" fill="#4fa92d" font-size="8" font-family="Poppins">☁ Réplica</text>
+                                                <text x="28" y="154" fill="#fff" opacity=".4" font-size="7" font-family="Poppins">tiempo real</text>
+                                                <rect x="118" y="122" width="84" height="42" rx="6" fill="#193892"/>
+                                                <text x="130" y="140" fill="#2074bc" font-size="8" font-family="Poppins">💾 Backup</text>
+                                                <text x="128" y="154" fill="#fff" opacity=".4" font-size="7" font-family="Poppins">diario/semanal</text>
+                                                <rect x="220" y="122" width="84" height="42" rx="6" fill="#193892"/>
+                                                <text x="232" y="140" fill="#f59500" font-size="8" font-family="Poppins">🔒 Cifrado</text>
+                                                <text x="236" y="154" fill="#fff" opacity=".4" font-size="7" font-family="Poppins">AES-256</text>
+                                            </svg>
+                                            <div class="mini-cap">Respaldo y Seguridad</div>
+                                        </div>
+                                    </div>
+                                    <button class="mprev" aria-label="Anterior">&#8249;</button>
+                                    <button class="mnext" aria-label="Siguiente">&#8250;</button>
+                                    <div class="mdots">
+                                        <button class="mdot active"></button>
+                                        <button class="mdot"></button>
+                                        <button class="mdot"></button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="slide-content">
-                        <h3>Mockup de alta fidelidad</h3>
-                        <p>Diseño final alineado a requerimientos de TeraLink.</p>
-                    </div>
-                </article>
-            </div>
-            <button class="carousel-button prev" aria-label="Anterior">‹</button>
-            <button class="carousel-button next" aria-label="Siguiente">›</button>
-            <div class="carousel-indicators" role="tablist">
-                <button class="indicator active" data-slide="0" aria-label="Ir a prototipo 1" aria-selected="true"></button>
-                <button class="indicator" data-slide="1" aria-label="Ir a prototipo 2" aria-selected="false"></button>
-                <button class="indicator" data-slide="2" aria-label="Ir a prototipo 3" aria-selected="false"></button>
-            </div>
-        </div>
-    </section>
+                </div>
 
-    <section id="sobre-nosotros">
-        <h2>Sobre Nosotros</h2>
-        <div class="contenedor">
-            <div class="item card">
-                <h3>Misión</h3>
-                <p>Proveer soluciones tecnológicas innovadoras que optimicen los procesos de nuestros clientes, garantizando calidad y eficiencia en cada desarrollo.</p>
-            </div>
-            <div class="item card">
-                <h3>Visión</h3>
-                <p>Ser la empresa líder en consultoría e ingeniería de software a nivel regional, reconocida por nuestra excelencia y compromiso con la vanguardia tecnológica.</p>
-            </div>
-            <div class="item card">
-                <h3>Valores</h3>
-                <p>Innovación, Integridad, Trabajo en Equipo, Calidad y Compromiso con el cliente.</p>
-            </div>
-        </div>
-    </section>
+            </div><!-- /.servicios-grid -->
+        </section>
 
-    <section id="servicios">
-        <h2>Servicios</h2>
-        <div class="contenedor">
-            <div class="servicio card">
-                <h3>Ingeniería de Software</h3>
-                <p>Desarrollo de sistemas robustos, escalables y seguros adaptados a las necesidades específicas de tu modelo de negocio.</p>
+        <!-- ═══════════════ CONTACTO ═══════════════ -->
+        <section id="contacto" class="contacto-section">
+            <div class="contacto-inner fade-in">
+                <span class="section-badge">Hablemos</span>
+                <h2>¿Listo para comenzar?</h2>
+                <p>Cuéntanos tu proyecto. Nuestro equipo está listo para escucharte y diseñar la solución tecnológica ideal para tu empresa.</p>
+                <a href="https://wa.me/+50232368684?text=Hola%2C%20me%20interesa%20conocer%20los%20servicios%20de%20TeraLink" target="_blank" rel="noopener noreferrer" class="btn-whatsapp">
+                    <i class="fab fa-whatsapp"></i> Contáctanos por WhatsApp
+                </a>
             </div>
-            <div class="servicio card">
-                <h3>Consultoría Tecnológica</h3>
-                <p>Asesoría experta para la transformación digital, optimización de infraestructura y adopción de nuevas tecnologías.</p>
-            </div>
-            <div class="servicio card">
-                <h3>Desarrollo de Proyectos</h3>
-                <p>Gestión integral de proyectos tecnológicos desde la conceptualización hasta la implementación y mantenimiento.</p>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="contacto">
-        <h2>Contacto</h2>
-        <div class="contenedor">
-            <p>¿Tienes alguna pregunta o necesitas nuestros servicios? ¡Contáctanos!</p>
-            <a href="https://wa.me/+50232368684?text=Mensaje,%20de%20prueba" target="_blank" class="btn-whatsapp">
-                <i class="fab fa-whatsapp"></i> Contáctanos por WhatsApp
-            </a>
-        </div>
-    </section>
+    </main>
 
+    <!-- ═══════════════ FOOTER ═══════════════ -->
     <footer>
-        <p>&copy; 2026 TeraLink. Todos los derechos reservados.</p>
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <a href="#inicio" class="logo">Tera<span>Link</span></a>
+                <p>Innovando el futuro con tecnología avanzada.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Navegación</h4>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Servicios</h4>
+                <ul>
+                    <li><a href="#servicios">Ingeniería de Software</a></li>
+                    <li><a href="#servicios">Consultoría Tecnológica</a></li>
+                    <li><a href="#servicios">Gestión de Bases de Datos</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contáctanos</h4>
+                <a href="https://wa.me/+50232368684" target="_blank" rel="noopener noreferrer" class="footer-wa">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 TeraLink. Todos los derechos reservados.</p>
+        </div>
     </footer>
 
     <script src="main.js"></script>
